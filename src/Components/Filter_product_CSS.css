@@ -1,0 +1,11 @@
+.filter-container{
+    position: absolute;
+    right: 0;
+    margin-right: 0;
+    background-color: gainsboro;
+    padding:10px  
+}
+
+.filter-apply-button{
+   margin-top: 50px;
+}

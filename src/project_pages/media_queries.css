@@ -81,8 +81,9 @@
     }
 
     .Card {
-        width: 160px;
-        height: 260px;
+        width: 146px !important;
+        height: 250px !important;
+        padding: 10px !important;
     }
 
     /* Back button penal */
@@ -177,12 +178,6 @@
     .landingpage-Card {
         width: 140px !important;
         height: 140px !important;
-        padding: 10px !important;
-    }
-
-    .Card {
-        width: 146px !important;
-        height: 250px !important;
         padding: 10px !important;
     }
 

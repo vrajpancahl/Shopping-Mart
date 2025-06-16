@@ -5,7 +5,6 @@ import { TbLogout2 } from "react-icons/tb";
 import { useEffect, useState } from 'react';
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { IoMdContacts } from "react-icons/io";
-// import p1_pic from './p1.jpg';
 import { default_user_img } from '../image_st_file';
 
 function Sidebar(props) {

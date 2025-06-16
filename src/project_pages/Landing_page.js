@@ -81,31 +81,38 @@ function Landing_page(props) {
                 <Sidebar_Component sidebar_show2={props.sidebar_show} />
             </nav>
             {/* <div className='advertise-container' > */}
-                {/* Left button */}
-                {/* image container */}
-                <div className='advertise-image-container' onMouseEnter={() => {
+            {/* Left button */}
+            {/* image container */}
+            <div className='advertise-image-container'
+                onMouseEnter={() => {
                     set_autoPlay(false)
                     clearTimeout(flag)
-                    }} onMouseLeave={() => { set_autoPlay(true) }} onTouchStart={()=>{ set_autoPlay(false)}} onTouchEnd={() => { set_autoPlay(true) }}>
-                    <button type='button' onClick={() => { previous_image() }} className='advertise-img-changing-button advertise-img-changing-previous-button'><GrPrevious /></button>
-                    <img className='advertise-image' src={Ad_images_arr[Ad_image_index]} alt='' />
-                    {/* /* paging dots */}
-                    <div className='container-paging'>
-                        {
-                            Ad_images_arr.map((_, index) => {
-                                return (<div
-                                    key={index}
-                                    className={
-                                        index == Ad_image_index ? "paging_dot paging_dot_active" : "paging_dot"
-                                    }
-                                    onClick={() => { set_Ad_image_index(index) }}
-                                ></div>)
-                            })
-                        }
-                    </div>
-                    <button type='button' onClick={() => { next_image() }} className='advertise-img-changing-button advertise-img-changing-next-button'><GrNext /></button>
+                }}
+                onMouseLeave={() => { set_autoPlay(true) }}
+                onTouchStart={() => {
+                    set_autoPlay(false)
+                    clearTimeout(flag)
+                }}
+                onTouchEnd={() => { set_autoPlay(true) }}>
+                <button type='button' onClick={() => { previous_image() }} className='advertise-img-changing-button advertise-img-changing-previous-button'><GrPrevious /></button>
+                <img className='advertise-image' src={Ad_images_arr[Ad_image_index]} alt='' />
+                {/* /* paging dots */}
+                <div className='container-paging'>
+                    {
+                        Ad_images_arr.map((_, index) => {
+                            return (<div
+                                key={index}
+                                className={
+                                    index == Ad_image_index ? "paging_dot paging_dot_active" : "paging_dot"
+                                }
+                                onClick={() => { set_Ad_image_index(index) }}
+                            ></div>)
+                        })
+                    }
                 </div>
-                {/* Right button */}
+                <button type='button' onClick={() => { next_image() }} className='advertise-img-changing-button advertise-img-changing-next-button'><GrNext /></button>
+            </div>
+            {/* Right button */}
 
             <div className="Card-main-container">
                 {

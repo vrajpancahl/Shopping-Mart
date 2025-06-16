@@ -1,22 +1,3 @@
-import p1 from "./images/p1.jpg";
-import p2 from "./images/p2.jpg";
-import p3 from "./images/p3.png";
-import event_mandap1 from "./images/event_mandap1.jpg";
-import event_mandap2 from "./images/event_mandap2.jpg";
-import event_mandap3 from "./images/event_mandap3.jpg";
-import event_mandap4 from "./images/event_mandap4.jpg";
-import event_mandap5 from "./images/event_mandap5.jpg";
-import event_mandap6 from "./images/event_mandap6.jpg";
-import event_mandap7 from "./images/event_mandap7.jpg";
-import event_mandap8 from "./images/event_mandap8.jpg";
-import event_mandap9 from "./images/event_mandap9.jpg";
-import event_mandap10 from "./images/event_mandap10.jpg";
-import event_mandap11 from "./images/event_mandap11.jpg";
-import event_mandap12 from "./images/event_mandap12.jpg";
-import event_mandap13 from "./images/event_mandap13.jpg";
-import event_mandap14 from "./images/event_mandap14.jpg";
-import event_mandap15 from "./images/event_mandap15.jpg";
-import event_mandap16 from "./images/event_mandap16.jpg";
 import shopping_mart_logo from "./images/shoppin_mart_logo-removebg.png";
 import about_image2 from "./images/aboutpage-img2.jpg"
 import loading_spiner from "./images/loading_spiner.gif";
@@ -239,7 +220,7 @@ import ad_image_5 from "./images/ad_image_5.jpg"
 import ad_image_6 from "./images/ad_image_6.jpg"
 
 
-export {p1, p2, p3, event_mandap1, event_mandap2, event_mandap3, event_mandap4, event_mandap5, event_mandap6, event_mandap7, event_mandap8, event_mandap9, event_mandap10, event_mandap11, event_mandap12, event_mandap13, event_mandap14, event_mandap15, event_mandap16, loading_spiner, shopping_mart_logo, about_image2, default_user_img , product_not_found, empty_cart,
+export { loading_spiner, shopping_mart_logo, about_image2, default_user_img , product_not_found, empty_cart,
 product001_0,product001_1,product001_2,product001_3,product001_4,
 product002_0,product002_1,product002_2,product002_3,product002_4,product002_5,
 product003_0,product003_1,product003_2,product003_3,product003_4,

@@ -7,18 +7,18 @@ import { GrNext } from "react-icons/gr";
 import { GrPrevious } from "react-icons/gr";
 import { useNavigate } from 'react-router-dom';
 import { ad_image_1, ad_image_2, ad_image_3, ad_image_4, ad_image_5, ad_image_6 } from '../image_st_file';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 
 function Landing_page(props) {
     const navigate = useNavigate();
     const [Ad_image_index, set_Ad_image_index] = useState(0);
     const Ad_images_arr = [ad_image_1, ad_image_2, ad_image_3, ad_image_4, ad_image_5, ad_image_6];
-    const [autoPlay, set_autoPlay] = useState(false);
-    let flag = null;
+    const [autoPlay, set_autoPlay] = useState(true);
+    let intervalRef = useRef(null);
 
     useEffect(() => {
-        flag = autoPlay && setTimeout(() => {
+        intervalRef = autoPlay && setTimeout(() => {
             next_image();
         }, 2500);
     });
@@ -85,15 +85,21 @@ function Landing_page(props) {
             {/* image container */}
             <div className='advertise-image-container'
                 onMouseEnter={() => {
-                    set_autoPlay(false)
-                    clearTimeout(flag)
+                    set_autoPlay(false);
+                    clearTimeout(intervalRef );
                 }}
-                onMouseLeave={() => { set_autoPlay(true) }}
+                onMouseLeave={() => {
+                    set_autoPlay(true);
+                }}
                 onTouchStart={() => {
-                    set_autoPlay(false)
-                    clearTimeout(flag)
+                    set_autoPlay(false);
+                    clearTimeout(intervalRef );
                 }}
-                onTouchEnd={() => { set_autoPlay(true) }}>
+
+                onTouchEnd={() => {
+                    set_autoPlay(true);
+                }}
+            >
                 <button type='button' onClick={() => { previous_image() }} className='advertise-img-changing-button advertise-img-changing-previous-button'><GrPrevious /></button>
                 <img className='advertise-image' src={Ad_images_arr[Ad_image_index]} alt='' />
                 {/* /* paging dots */}

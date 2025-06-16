@@ -86,7 +86,7 @@ function Landing_page(props) {
                 <div className='advertise-image-container' onMouseEnter={() => {
                     set_autoPlay(false)
                     clearTimeout(flag)
-                }} onMouseLeave={() => { set_autoPlay(true) }} >
+                    }} onMouseLeave={() => { set_autoPlay(true) }} >
                     <button type='button' onClick={() => { previous_image() }} className='advertise-img-changing-button advertise-img-changing-previous-button'><GrPrevious /></button>
                     <img className='advertise-image' src={Ad_images_arr[Ad_image_index]} alt='' />
                     {/* /* paging dots */}

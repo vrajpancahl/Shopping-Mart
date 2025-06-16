@@ -6,6 +6,7 @@
 
     .product-image-conatiner {
         display: flex;
+        position: relative;
         justify-content: center;
         height: 400px;
         margin: 20px;
@@ -109,11 +110,12 @@
     }
 
     .image-change-button {
-        margin-top: 40%;
-        width: 50px;
-        height: 50px;
+        margin-top: 50%;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
         border: none;
+        position: absolute;
     }
 
     .image-conatiner {

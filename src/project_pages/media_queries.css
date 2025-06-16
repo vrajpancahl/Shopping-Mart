@@ -81,7 +81,7 @@
     }
 
     .Card {
-        width: 146px !important;
+        width: 145px !important;
         height: 250px !important;
         padding: 10px !important;
     }
@@ -176,8 +176,8 @@
 
 @media(max-width: 375px) {
     .landingpage-Card {
-        width: 140px !important;
-        height: 140px !important;
+        width: 150px !important;
+        height: 150px !important;
         padding: 10px !important;
     }
 
@@ -187,6 +187,12 @@
     }
 }
 
+@media(max-width: 355px) {
+    .Card{
+        width: 120px !important;
+        height: 220px !important;
+    }
+}
 
 
 /*-------------------------->  special for large from 480 <---------------------*/

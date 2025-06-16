@@ -107,13 +107,14 @@ function Product_detail(props) {
             <div className='product-container'>
 
                 <div className="product-image-conatiner">
-                    <button type="button" className='image-change-button' onClick={changImgPrevious} ><GrPrevious /></button>
+                    <button type="button" className='image-change-button advertise-img-changing-previous-button' onClick={changImgPrevious} ><GrPrevious /></button>
                     {
                         (pic_arr !== 0 && <div className='image-conatiner'>
                             <img className='card-img' src={require(`../images/${pic_arr[img_ind]}`)} />
                         </div>)
                     }
-                    <button type="button" onClick={changImgNext} className="image-change-button"><GrNext /></button>
+                     
+                    <button type="button" onClick={changImgNext} className="image-change-button advertise-img-changing-next-button"><GrNext /></button>
                 </div>
                 <div className='product-info-conatiner'>
                     {

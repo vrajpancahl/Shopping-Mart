@@ -99,8 +99,8 @@ function User_cart(props) {
                                                         <img className="cart-card-img" src={require(`../images/${e.image_name[0]}`)} />
                                                     </div>
                                                     <div className='cart-text-container'>
-                                                        <p className='card-text'>{product_name}</p>
-                                                        <p className='cart-card-text-price'>₹ {e.price}</p>
+                                                        <p className='card-text product-detail-text put_line_height'>{product_name}</p>
+                                                        <p className='cart-card-text-price product-detail-text'>₹ {e.price}</p>
                                                     </div>
                                                 </div>
                                                 <button onClick={() => { delete_cart_product(e.id) }} className='cart-delet-product-button'>Delete</button>

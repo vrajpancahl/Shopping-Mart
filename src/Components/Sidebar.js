@@ -43,8 +43,6 @@ function Sidebar(props) {
             </div>
             <div className='sidebar-button-container'>
 
-               
-
                     <div onClick={() => { navigate('/user_cart') }} className="sidebar-tab-button contact-cursorpointer">
                         <p className='sidebar-button-p'><BsCart3 /></p>
                         <p className='sidebar-button-p'>Cart</p>

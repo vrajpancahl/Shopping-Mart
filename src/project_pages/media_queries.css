@@ -1,0 +1,202 @@
+/* Large laptop */
+/* @media (max-width: 1480px) {
+
+} */
+
+/* Tablet (≤ 1199px) */
+@media (max-width: 1199px) {
+    .container {
+        padding: 30px;
+        font-size: 20px;
+    }
+
+    .advertise-image-container {
+        height: 230px !important;
+    }
+}
+
+/* Mobile (≤ 768px) ---------------------------------------------------------------------------------768-------*/
+@media (max-width: 768px) {
+
+    /* langing page */
+    .landingpage-Card {
+        font-size: 1rem;
+        width: 230px;
+        height: 230px;
+        overflow: hidden;
+    }
+
+    .navbar-tabs-container {
+        display: none !important;
+    }
+
+    .navbar .logo {
+        display: inline;
+        margin: 5px 10px 5px 25px;
+        font-size: 25px;
+        width: 160px;
+        height: 30px;
+    }
+
+    .navbar .logo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*landing page Advertisement container  */
+    .advertise-image-container {
+        height: 200px !important;
+    }
+
+    /* About page */
+    .About-image-container{
+        margin-right: 0px !important;
+    }
+}
+
+/* Small Mobile (≤ 480px)-----------------------------------------------------------------480-------------- */
+@media (max-width: 480px) {
+
+
+    /* Navbar property */
+    .navbar {
+        flex-direction: column;
+    }
+
+    .left-div {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .search-box-input {
+        margin: 5px;
+    }
+
+    /* Landing property */
+    .landingpage-Card {
+        font-size: 0.7rem;
+        width: 160px;
+        height: 160px;
+        overflow: hidden;
+    }
+
+    .Card {
+        width: 160px;
+        height: 260px;
+    }
+
+    /* Back button penal */
+    .search-result-page-header {
+        padding: 10px 10px 10px 10px;
+    }
+
+    /* Image changing Button in product detail page */
+    .image-change-button {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    /* User cart */
+
+    .Cart-Card {
+        /* display: flex; */
+        flex-direction: column !important;
+        /* align-items: center; */
+        width: 90% !important;
+        height: 240px !important;
+        /* border-radius: 10px; */
+        /* margin: 5px; */
+        /* border: 3px solid rgb(231, 231, 231); */
+        /* padding: 3px; */
+        overflow: hidden;
+    }
+
+    .cart-card-section1 {
+        /* display: flex; */
+        flex-direction: row !important;
+        height: 90% !important;
+    }
+
+    .cart-card-img-container {
+        width: 49% !important;
+        height: 100% !important;
+        /* border: 5px solid red; */
+        /* display: flex; */
+        /* align-items: center; */
+        /* overflow: hidden; */
+    }
+
+    .cart-text-container {
+        height: 70%;
+        width: 49% !important;
+        /* border: 5px solid rgb(85, 0, 128); */
+    }
+
+    .cart-card-img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+
+    /*landing page Advertisement container  */
+    .advertise-image-container {
+        height: 100px !important;
+    }
+
+    /* landing page advertise container paging bar */
+    .paging_dot {
+        width: 3px !important;
+        height: 3px !important;
+    }
+
+    .container-paging {
+        padding: 3px 12px 3px 3px !important;
+    }
+
+    .advertise-img-changing-button {
+        width: 20px !important;
+        height: 20px !important;
+        top: 38% !important;
+    }
+
+    .cart-delet-product-button {
+        height: 10%;
+    }
+
+    /* Footer */
+    .footer-logo-container{
+        width: 40% !important;
+    }
+    .footer-info-container{
+        font-size: 15px !important;
+    }
+
+    /* About page */
+    .About-heading-font-size{
+        margin-left: 20px !important;
+    }
+
+}
+
+
+
+/*-------------------------->  special for large from 480 <---------------------*/
+@media (min-width: 480px) {
+
+    /* User cart */
+    .Cart-Card {
+        flex-direction: column !important;
+        width: 350px !important;
+        height: 270px !important;
+    }
+
+    .cart-card-section1 {
+        flex-direction: row !important;
+    }
+
+    .cart-card-img-container .cart-text-container {
+        width: 50% !important;
+    }
+
+
+}

@@ -75,8 +75,8 @@
     /* Landing property */
     .landingpage-Card {
         font-size: 0.7rem;
-        width: 160px;
-        height: 160px;
+        width: 155px;
+        height: 155px;
         overflow: hidden;
     }
 
@@ -197,7 +197,7 @@
     .Card{
         width: 120px !important;
         height: 220px !important;
-    }
+    }   
 }
 
 

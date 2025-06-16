@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Shopping-Mart/static/css/main.f74bfddf.css",
-    "main.js": "/Shopping-Mart/static/js/main.7dd597f3.js",
+    "main.css": "/Shopping-Mart/static/css/main.9feb1704.css",
+    "main.js": "/Shopping-Mart/static/js/main.3513e55f.js",
     "static/js/453.68693753.chunk.js": "/Shopping-Mart/static/js/453.68693753.chunk.js",
     "static/media/product045_2.jpg": "/Shopping-Mart/static/media/product045_2.bc684eff460072c6cdff.jpg",
     "static/media/product008_4.jpg": "/Shopping-Mart/static/media/product008_4.7cf39f5fc71ff0210944.jpg",
@@ -223,12 +223,12 @@
     "static/media/loading_spiner.gif": "/Shopping-Mart/static/media/loading_spiner.c0abcd6f22745764873d.gif",
     "static/media/product015_1.jpg": "/Shopping-Mart/static/media/product015_1.d097deea71f9ff40eec2.jpg",
     "index.html": "/Shopping-Mart/index.html",
-    "main.f74bfddf.css.map": "/Shopping-Mart/static/css/main.f74bfddf.css.map",
-    "main.7dd597f3.js.map": "/Shopping-Mart/static/js/main.7dd597f3.js.map",
+    "main.9feb1704.css.map": "/Shopping-Mart/static/css/main.9feb1704.css.map",
+    "main.3513e55f.js.map": "/Shopping-Mart/static/js/main.3513e55f.js.map",
     "453.68693753.chunk.js.map": "/Shopping-Mart/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f74bfddf.css",
-    "static/js/main.7dd597f3.js"
+    "static/css/main.9feb1704.css",
+    "static/js/main.3513e55f.js"
   ]
 }

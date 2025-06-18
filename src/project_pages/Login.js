@@ -14,7 +14,7 @@ function Login() {
   const navigate = useNavigate();
 
   const goToSignupPage = () => {
-    window.open('/signup_page', "_blank");
+    navigate('/signup_page', { replace: true });
   };
 
   const Aunthentication = async () => {

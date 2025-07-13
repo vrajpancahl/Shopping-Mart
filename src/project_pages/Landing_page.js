@@ -18,11 +18,28 @@ function Landing_page(props) {
     let intervalRef = useRef(null);
 
     useEffect(() => {
-        intervalRef = autoPlay && setTimeout(() => {
+        // intervalRef = autoPlay && setTimeout(() => {
+        //     next_image();
+        // }, 2500);
+        // return () => clearTimeout(autoPlay);
+        if (intervalRef.current) {
+        clearTimeout(intervalRef.current);
+    }
+
+    // Only set a new timeout if autoplay is true
+    if (autoPlay) {
+        intervalRef.current = setTimeout(() => {
             next_image();
         }, 2500);
-        return () => clearTimeout(autoPlay);
-    });
+    }
+
+    // Cleanup function to clear timeout on unmount or re-run
+    return () => {
+        if (intervalRef.current) {
+            clearTimeout(intervalRef.current);
+        }
+    };
+    },[Ad_image_index,autoPlay]);
     const landingpage_catagory = [
         {
             title: "Mobile",

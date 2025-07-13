@@ -21,6 +21,7 @@ function Landing_page(props) {
         intervalRef = autoPlay && setTimeout(() => {
             next_image();
         }, 2500);
+        return () => clearTimeout(autoPlay);
     });
     const landingpage_catagory = [
         {

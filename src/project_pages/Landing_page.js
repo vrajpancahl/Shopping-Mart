@@ -15,6 +15,7 @@ function Landing_page(props) {
     const [Ad_image_index, set_Ad_image_index] = useState(0);
     const Ad_images_arr = [ad_image_1, ad_image_2, ad_image_3, ad_image_4, ad_image_5, ad_image_6];
     const [autoPlay, set_autoPlay] = useState(true);
+    const [isTransitioning, setIsTransitioning] = useState(false);
     let intervalRef = useRef(null);
 
     useEffect(() => {
@@ -74,21 +75,25 @@ function Landing_page(props) {
     }
 
     function next_image() {
+        setIsTransitioning(true);
         if ((Ad_images_arr.length - 1) == Ad_image_index) {
             set_Ad_image_index(0);
         }
         else {
             set_Ad_image_index(Ad_image_index + 1);
         }
+        setTimeout(() => setIsTransitioning(false), 500);
     }
 
     function previous_image() {
+        setIsTransitioning(true);
         if (Ad_image_index == 0) {
             set_Ad_image_index(Ad_images_arr.length - 1);
         }
         else {
             set_Ad_image_index(Ad_image_index - 1);
         }
+        setTimeout(() => setIsTransitioning(false), 500);
     }
 
     return (

@@ -43,19 +43,19 @@ function Sidebar(props) {
             </div>
             <div className='sidebar-button-container'>
 
-                    <div onClick={() => { props.sidebar_show2 == false; navigate('/user_cart') }} className="sidebar-tab-button contact-cursorpointer">
+                    <div onClick={() => { props.sidebar_show_fun2(false); navigate('/user_cart') }} className="sidebar-tab-button contact-cursorpointer">
                         <p className='sidebar-button-p'><BsCart3 /></p>
                         <p className='sidebar-button-p'>Cart</p>
                     </div>
-                    <div onClick={() => { props.sidebar_show2 == false; navigate('/about_page') }} className="sidebar-tab-button contact-cursorpointer">
+                    <div onClick={() => { props.sidebar_show_fun2(false); navigate('/about_page') }} className="sidebar-tab-button contact-cursorpointer">
                         <p className='sidebar-button-p'><AiOutlineInfoCircle /></p>
                         <p className='sidebar-button-p'>About Us</p>
                     </div>
-                    <div onClick={() => { props.sidebar_show2 == false; navigate('/contact_page') }} className="sidebar-tab-button contact-cursorpointer">
+                    <div onClick={() => { props.sidebar_show_fun2(false); navigate('/contact_page') }} className="sidebar-tab-button contact-cursorpointer">
                         <p className='sidebar-button-p'><IoMdContacts /></p>
                         <p className='sidebar-button-p'>Contact Us</p>
                     </div>
-                    <div onClick={() => { props.sidebar_show2 == false; logout("/") }} className="sidebar-tab-button contact-cursorpointer">
+                    <div onClick={() => { props.sidebar_show_fun2(false); logout("/") }} className="sidebar-tab-button contact-cursorpointer">
                         <p className='sidebar-button-p'> <TbLogout2 /></p>
                         <p className='sidebar-button-p'>Logout</p>
                     </div>

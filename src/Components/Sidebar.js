@@ -10,10 +10,7 @@ import { default_user_img } from '../image_st_file';
 function Sidebar(props) {
 
     const navigate = useNavigate();
-    const user_email = localStorage.getItem('email');
     const [user_name, set_user_name] = useState('User Name');
-    
-
     
     function logout(path)
     {
@@ -23,7 +20,7 @@ function Sidebar(props) {
     }
 
     useEffect(() => {
-        let temp_email = localStorage.getItem("email");
+        let temp_email = localStorage.getItem('email');
         let indeof_at_the_rate = temp_email.indexOf("@");
         let temp_user_name = temp_email.substring(0, indeof_at_the_rate);
         set_user_name(temp_user_name);
@@ -39,11 +36,11 @@ function Sidebar(props) {
                     </div>
                     <h1 className='user-name-h1'>{user_name}</h1>
                 </div>
-                <div className='user-email-text'>{user_email}</div>
+                <div className='user-email-text'>{localStorage.getItem('email')}</div>
             </div>
             <div className='sidebar-button-container'>
-
-                    <div onClick={() => { props.sidebar_show_fun2(false); navigate('/user_cart') }} className="sidebar-tab-button contact-cursorpointer">
+                    <div onClick={() => {
+                        props.sidebar_show_fun2(false); navigate('/user_cart') }} className="sidebar-tab-button contact-cursorpointer">
                         <p className='sidebar-button-p'><BsCart3 /></p>
                         <p className='sidebar-button-p'>Cart</p>
                     </div>
@@ -51,7 +48,8 @@ function Sidebar(props) {
                         <p className='sidebar-button-p'><AiOutlineInfoCircle /></p>
                         <p className='sidebar-button-p'>About Us</p>
                     </div>
-                    <div onClick={() => { props.sidebar_show_fun2(false); navigate('/contact_page') }} className="sidebar-tab-button contact-cursorpointer">
+                    <div onClick={() => { 
+                        props.sidebar_show_fun2(false); navigate('/contact_page') }} className="sidebar-tab-button contact-cursorpointer">
                         <p className='sidebar-button-p'><IoMdContacts /></p>
                         <p className='sidebar-button-p'>Contact Us</p>
                     </div>
@@ -59,7 +57,6 @@ function Sidebar(props) {
                         <p className='sidebar-button-p'> <TbLogout2 /></p>
                         <p className='sidebar-button-p'>Logout</p>
                     </div>
-                
             </div>
         </div>
     )

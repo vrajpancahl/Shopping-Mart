@@ -7,7 +7,7 @@ import Loading from "../Components/Loading";
 import { shopping_mart_logo } from "../image_st_file";
 
 
-function Login() {
+function Login(props) {
   const [email, set_email] = useState("");
   const [password, set_password] = useState("");
   const [loading, set_loading] = useState(false);
@@ -22,14 +22,14 @@ function Login() {
     set_loading(true);
     await signInWithEmailAndPassword(auth, email, password)
       .then(() => {
-        alert("logged in successfully");
+         alert("Login successful");
         console.log("done");
-        localStorage.setItem("email", email)
+        // props.set_login_status([true,email]);
+        localStorage.getItem('email');
         navigate('/landing_page', { replace: true });
-
       })
       .catch((error) => {
-        alert("something went wrong");
+        alert("Something is wrong...");
         console.log("not done");
       });
     set_loading(false)

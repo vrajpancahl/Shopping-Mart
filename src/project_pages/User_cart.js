@@ -15,11 +15,24 @@ import BackToPreviousPage from '../Components/BackToPreviousPage';
 
 function User_cart(props) {
     const db = getFirestore(app);
-    const user_eamil = useState(localStorage.getItem('email'));
     let [user_data_array, set_user_data_array] = useState('');
     const [loading, set_loading] = useState(false);
-    const current = localStorage.getItem("email");
     const navigate = useNavigate();
+
+    useEffect(()=>{
+        if((localStorage.getItem("email")) == undefined || (localStorage.getItem("email")) == null){
+            alert("For better experience, continue with your account");
+            navigate('/', { replace: true });
+        }
+        else{
+            retrive_Data();
+        }
+    },[])
+
+    // useEffect(()=>{
+    //     if(localStorage.getItem('email') !== null){
+    //     }
+    // },[])
 
     function gotoProductDetail(_id, _cate) {
         props.ForCart_set_product_detail_info_fun([_id, _cate]);
@@ -31,7 +44,7 @@ function User_cart(props) {
     }
 
     const retrive_Data = async () => {
-        const docRef = doc(db, 'shoping_store', current);
+        const docRef = doc(db, 'shoping_store', localStorage.getItem('email'));
         set_loading(true);
         await getDoc(docRef)
             .then((docSnap) => {
@@ -51,7 +64,7 @@ function User_cart(props) {
 
     const delete_cart_product = async (product_id) => {
         try {
-            const docRef = doc(db, 'shoping_store', current)
+            const docRef = doc(db, 'shoping_store', localStorage.getItem('email'))
             set_loading(true)
             await updateDoc(docRef, {
                 product_id_array: arrayRemove(product_id)
@@ -65,27 +78,26 @@ function User_cart(props) {
         retrive_Data();
     }
 
-    useEffect(() => {
-        retrive_Data();
-    }, [])
+
+    
 
     return (
         <div>
             {(loading == true) ? <Loading /> : ""}
             <div className='search-result-page-header'>
                 <BackToPreviousPage path={"/landing_page "} />
-                <div><h3>User : {user_eamil}</h3></div>
+                <div><h3>User : {localStorage.getItem('email')}</h3></div>
             </div>
             <div className='User-cart-page-main-container'>
                 {
                     data.map((e) => {
                         let product_name = '';
                         if ((e.name).length < 90) {
-                            product_name = (e.name).concat("...");
+                            product_name = e.name;
                         }
                         else {
                             product_name = e.name;
-                            // product_name = e.name(((e.name).substring(0, 90)).concat("..."));
+                            product_name = (((e.name).substring(0, 90)).concat("..."));
                         }
                         return (
                             ((user_data_array.length > 0) &&
@@ -93,8 +105,8 @@ function User_cart(props) {
                                     console.log("user data map");
                                     if (e.id == item) {
                                         return (
-                                            <div onClick={() => { gotoProductDetail(e.id, e.category) }} className="Cart-Card">
-                                                <div className='cart-card-section1'>
+                                            <div className="Cart-Card">
+                                                <div  onClick={() => { gotoProductDetail(e.id, e.category) }}  className='cart-card-section1'>
                                                     <div className="cart-card-img-container">
                                                         <img className="cart-card-img" src={require(`../images/${e.image_name[0]}`)} />
                                                     </div>
@@ -103,7 +115,9 @@ function User_cart(props) {
                                                         <p className='cart-card-text-price product-detail-text'>₹ {e.price}</p>
                                                     </div>
                                                 </div>
-                                                <button onClick={() => { delete_cart_product(e.id) }} className='cart-delet-product-button'>Delete</button>
+                                                <div>
+                                                    <button onClick={() => { delete_cart_product(e.id) }} className='cart-delet-product-button'>Delete</button>
+                                                </div>
                                             </div>
                                         )
                                     }

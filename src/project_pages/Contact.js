@@ -10,8 +10,15 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { HiMiniBuildingLibrary } from "react-icons/hi2";
 import BackToPreviousPage from '../Components/BackToPreviousPage';
+import { useEffect } from 'react';
 
 function Contact() {
+  // Scroll page to top
+useEffect(()=>{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    })
+
     return (
         <div>
             <div className='search-result-page-header'>

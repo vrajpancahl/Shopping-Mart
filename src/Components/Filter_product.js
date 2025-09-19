@@ -93,14 +93,14 @@ function Filter_product(props) {
     return (
         <div className="filter-container">
             <h4>Filter Category</h4>
-            <div>
+            <div className='fileter-Select-field'>
                 <input type="checkbox"
                 value={"price"}
                     onClick={
                         (event) => {
                             (event.target.checked) ? add_filterMode(event.target.value) : remover_filterMode(event.target.value);
                         }
-                    } />
+                    } />    
                     <label>Price</label>
                 <input type="checkbox"
                 value={"brand"}
@@ -113,12 +113,12 @@ function Filter_product(props) {
             </div>
 
             <h4>Select Price Range</h4>
-            <div>
-                <input onChange={(event) => {
+            <div >
+                <input className="fileter-field-margin" onChange={(event) => {
                     set_selected_low_price(event.target.value);
                     props.set_MaxMinBrand_value_fun([event.target.value, props.MaxMinBrand_value_var[1], props.MaxMinBrand_value_var[2],props.MaxMinBrand_value_var[3]]);
                 }} type='number' placeholder="Low" /><br />
-                <input onChange={(event) => {
+                <input className="fileter-field-margin" onChange={(event) => {
                     set_selected_high_price(event.target.value)
                     props.set_MaxMinBrand_value_fun([props.MaxMinBrand_value_var[0], event.target.value, props.MaxMinBrand_value_var[2],props.MaxMinBrand_value_var[3]]);
                 }} type='number' placeholder="High" />
@@ -128,7 +128,9 @@ function Filter_product(props) {
                 brand_arr.map((item) => {
                     console.log("Selected map callled")
                     return (
-                        <div key={item}>
+                        <div key={item}
+                        className='fileter-Select-field'
+                        >
                             <input
                                 type="checkbox"
                                 defaultValue={item}
@@ -143,7 +145,7 @@ function Filter_product(props) {
                 })
             }
 
-            <button className='filter-apply-button' onClick={() => { props.Apply_filter_fun(!(props.Apply_filter_var)) }}>{(props.Apply_filter_var == true) ? "Show All" : "Apply Filter"}</button>
+            <button className='filter-enable-button' onClick={() => { props.Apply_filter_fun(!(props.Apply_filter_var)) }}>{(props.Apply_filter_var == true) ? "Show All" : "Apply Filter"}</button>
         </div>
     )
 }

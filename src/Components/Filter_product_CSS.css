@@ -6,6 +6,22 @@
     padding:10px  
 }
 
-.filter-apply-button{
+.filter-enable-button{
    margin-top: 50px;
+   padding: 5px;
+   background-color: rgb(72, 0, 255);
+   border: none;
+   border-radius: 5px;
+   color: white;
+}
+
+.fileter-Select-field{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 3px;
+}
+
+.fileter-field-margin{
+    margin: 3px;
 }

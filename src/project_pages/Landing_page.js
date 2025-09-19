@@ -18,6 +18,13 @@ function Landing_page(props) {
     const [isTransitioning, setIsTransitioning] = useState(false);
     let intervalRef = useRef(null);
 
+    useEffect(()=>{
+        if((localStorage.getItem("email")) == null){
+        alert("For better experience, continue with your account");
+        navigate('/', { replace: true });
+        }
+    })
+
     useEffect(() => {
         // intervalRef = autoPlay && setTimeout(() => {
         //     next_image();
@@ -41,6 +48,7 @@ function Landing_page(props) {
         }
     };
     },[Ad_image_index,autoPlay]);
+    
     const landingpage_catagory = [
         {
             title: "Mobile",
@@ -69,11 +77,13 @@ function Landing_page(props) {
         },
     ]
 
+    // Click on category card, redirect to Search Result page
     function gotoSearchPage(t) {
         props.set_search_text_fun(t);
         navigate('/search_result_page', { replace: true })
     }
 
+    // Changing image to next
     function next_image() {
         setIsTransitioning(true);
         if ((Ad_images_arr.length - 1) == Ad_image_index) {
@@ -85,6 +95,7 @@ function Landing_page(props) {
         setTimeout(() => setIsTransitioning(false), 500);
     }
 
+    //Change image to previous
     function previous_image() {
         setIsTransitioning(true);
         if (Ad_image_index == 0) {
@@ -93,19 +104,21 @@ function Landing_page(props) {
         else {
             set_Ad_image_index(Ad_image_index - 1);
         }
-        setTimeout(() => setIsTransitioning(false), 500);
+        setTimeout(() => setIsTransitioning(false), 500); 
     }
 
     return (
 
         <div className='page-main-container'>
-            <Navbar_Component sidebar_show_fun2={props.sidebar_show_fun} sidebar_show_var2={props.sidebar_show_var} search_text_fun2={props.search_text_fun} />
+            <Navbar_Component sidebar_show_fun2={props.sidebar_show_fun} sidebar_show_var2={props.sidebar_show_var} search_text_fun2={props.search_text_fun} search_text_var2={props.search_text_var}  
+            set_product_detail_info_fun2={props.set_product_detail_info_fun}
+            show_suggestion_var2={props.show_suggestion_var} set_show_suggestion_fun2={props.set_show_suggestion_fun}
+            />
             <nav >
-                <Sidebar_Component sidebar_show2={props.sidebar_show} />
+                <Sidebar_Component sidebar_show2={props.sidebar_show} sidebar_show_fun2={props.sidebar_show_fun} />
             </nav>
-            {/* <div className='advertise-container' > */}
-            {/* Left button */}
-            {/* image container */}
+
+            {/* Advertise container */}
             <div className='advertise-image-container'
                 onMouseEnter={() => {
                     set_autoPlay(false);
@@ -123,9 +136,15 @@ function Landing_page(props) {
                     set_autoPlay(true);
                 }}
             >
+                {/* Button for change next image */}
                 <button type='button' onClick={() => { previous_image() }} className='advertise-img-changing-button advertise-img-changing-previous-button'><GrPrevious /></button>
+                {/* Button for change next image END*/}
+
+                {/* Advertise image container */}
                 <img className='advertise-image' src={Ad_images_arr[Ad_image_index]} alt='' />
-                {/* /* paging dots */}
+                {/* Advertise image container END*/}
+
+                {/*Advertice image pagging tab*/}
                 <div className='container-paging'>
                     {
                         Ad_images_arr.map((_, index) => {
@@ -139,26 +158,36 @@ function Landing_page(props) {
                         })
                     }
                 </div>
-                <button type='button' onClick={() => { next_image() }} className='advertise-img-changing-button advertise-img-changing-next-button'><GrNext /></button>
-            </div>
-            {/* Right button */}
+                {/*Advertice image pagging tab END*/}
 
+                {/* Button for change previous image */}
+                <button type='button' onClick={() => { next_image() }} className='advertise-img-changing-button advertise-img-changing-next-button'><GrNext /></button>
+                {/* Button for change previous image END*/}
+            </div>
+            {/* Advertise container END*/}
+            
+            {/* Catagory cards conatiner */}
             <div className="Card-main-container">
                 {
                     landingpage_catagory.map((e) => {
-                        return (<div onClick={() => { gotoSearchPage(e.search_text) }} className='landingpage-Card'>
+                        return (
+                        // Category information card  
+                        <div onClick={() => { gotoSearchPage(e.search_text) }} className='landingpage-Card'> 
                             <h2 className='landingpage-card-heading'>{e.title}</h2>
                             <div className='landingpage-card-img-container'>
                                 <img className='landingpage-card-image' src={require(`../images/${e.image_path}`)} alt='Nathi' />
                             </div>
                         </div>
+                        // Category information card END
                         )
                     })
                 }
             </div>
-
-            <Footer />
+            {/* Catagory cards conatiner END*/}
+            
+             <Footer />{/* Footer container */}
         </div>
+        // Landing page END
     )
 }
 

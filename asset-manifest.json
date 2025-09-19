@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Shopping-Mart/static/css/main.5a14517f.css",
-    "main.js": "/Shopping-Mart/static/js/main.737a9baa.js",
+    "main.css": "/Shopping-Mart/static/css/main.5c26230e.css",
+    "main.js": "/Shopping-Mart/static/js/main.3184a757.js",
     "static/js/453.68693753.chunk.js": "/Shopping-Mart/static/js/453.68693753.chunk.js",
     "static/media/product045_2.jpg": "/Shopping-Mart/static/media/product045_2.bc684eff460072c6cdff.jpg",
     "static/media/product008_4.jpg": "/Shopping-Mart/static/media/product008_4.7cf39f5fc71ff0210944.jpg",
@@ -98,7 +98,6 @@
     "static/media/product016_1.jpg": "/Shopping-Mart/static/media/product016_1.32337c5fbd8b88603219.jpg",
     "static/media/product033_2.jpg": "/Shopping-Mart/static/media/product033_2.7695b1a45ea3dca6ae56.jpg",
     "static/media/product021_2.jpg": "/Shopping-Mart/static/media/product021_2.6fd847c1cbab4a4466d8.jpg",
-    "static/media/ad_image_3.jpg": "/Shopping-Mart/static/media/ad_image_3.77371d06a255740cd7a2.jpg",
     "static/media/product029_3.jpg": "/Shopping-Mart/static/media/product029_3.66f302904062d52e55b3.jpg",
     "static/media/product029_2.jpg": "/Shopping-Mart/static/media/product029_2.a0b4a218419fea20fce3.jpg",
     "static/media/product048_3.jpg": "/Shopping-Mart/static/media/product048_3.f62bcb0ba2033a14142a.jpg",
@@ -116,6 +115,7 @@
     "static/media/product045_1.jpg": "/Shopping-Mart/static/media/product045_1.efeca5ec196c4c652e45.jpg",
     "static/media/product001_5.jpg": "/Shopping-Mart/static/media/product001_5.c308f3cf242de2c4fe0b.jpg",
     "static/media/product049_1.jpg": "/Shopping-Mart/static/media/product049_1.9654194488d5d2e444f4.jpg",
+    "static/media/ad_image_3.jpg": "/Shopping-Mart/static/media/ad_image_3.ad5ab20a0fad48a6b11d.jpg",
     "static/media/product038_2.jpg": "/Shopping-Mart/static/media/product038_2.649d1127762c1201ea83.jpg",
     "static/media/product029_1.jpg": "/Shopping-Mart/static/media/product029_1.fecedf4da93821145704.jpg",
     "static/media/product012_1.jpg": "/Shopping-Mart/static/media/product012_1.5a09b1c203446380faa9.jpg",
@@ -223,12 +223,12 @@
     "static/media/loading_spiner.gif": "/Shopping-Mart/static/media/loading_spiner.c0abcd6f22745764873d.gif",
     "static/media/product015_1.jpg": "/Shopping-Mart/static/media/product015_1.d097deea71f9ff40eec2.jpg",
     "index.html": "/Shopping-Mart/index.html",
-    "main.5a14517f.css.map": "/Shopping-Mart/static/css/main.5a14517f.css.map",
-    "main.737a9baa.js.map": "/Shopping-Mart/static/js/main.737a9baa.js.map",
+    "main.5c26230e.css.map": "/Shopping-Mart/static/css/main.5c26230e.css.map",
+    "main.3184a757.js.map": "/Shopping-Mart/static/js/main.3184a757.js.map",
     "453.68693753.chunk.js.map": "/Shopping-Mart/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a14517f.css",
-    "static/js/main.737a9baa.js"
+    "static/css/main.5c26230e.css",
+    "static/js/main.3184a757.js"
   ]
 }

@@ -61,7 +61,7 @@ function Navbar(props) {
                 {/* Search Button */}
                 <button id='search-button' onClick={() => { gotoSearchResultPage() }} ><IoSearchSharp /></button>
         
-                {(current_text.length !== 0) && <div className="SearchSuggetion_main_container">
+                {/* {(current_text.length !== 0) && <div className="SearchSuggetion_main_container">
                  { 
                  data.map((e) => {
                    let fnl_str = "";
@@ -92,7 +92,7 @@ function Navbar(props) {
                    }
                  })
                  }
-               </div>}
+               </div>} */}
             </div>
     
 

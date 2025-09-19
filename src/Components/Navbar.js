@@ -37,7 +37,7 @@ function Navbar(props) {
     }
 
     return (
-        <div className='navbar' style={{position: "sticky"}}>
+        <div className='navbar'>
             <div className="left-div">
 
                 <span className="sidebar-button">

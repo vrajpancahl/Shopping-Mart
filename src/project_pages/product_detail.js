@@ -78,7 +78,7 @@ function Product_detail(props) {
                 });
             }
             set_loading(false);
-            alert("Done! Added to car");
+            alert("Done! Added to cart");
         }
         catch (error) {
             console.log("Add to card fuction ERROR: ", error);

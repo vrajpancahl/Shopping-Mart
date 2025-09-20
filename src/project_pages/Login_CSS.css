@@ -63,3 +63,8 @@
     padding: 10px;
     color: white
 }   
+
+.pass_instruction_mess{
+    font-size: 10px;
+    color: red;
+}

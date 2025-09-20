@@ -25,12 +25,12 @@ function Login(props) {
          alert("Login successful");
         console.log("done");
         // props.set_login_status([true,email]);
-        localStorage.getItem('email');
+        localStorage.setItem('email',email);
         navigate('/landing_page', { replace: true });
       })
       .catch((error) => {
         alert("Something is wrong...");
-        console.log("not done");
+        console.log("not done",error);
       });
     set_loading(false)
   }

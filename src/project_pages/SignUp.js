@@ -23,12 +23,12 @@ function Signup() {
             .then(() => {
                 alert("Signup Successfully");
                 console.log("done");
-                localStorage.setItem('email', email)
+                localStorage.setItem('email', email);
                 navigate('/landing_page', { replace: true });
             })
             .catch((error) => {
                 alert("something went wrong");
-                console.log("not done");
+                console.log("not done",error);
             });
         set_loading(false)
     }
@@ -51,10 +51,13 @@ function Signup() {
                 <input className="input-feilds" onChange={(e) => {
                     set_password(e.target.value);
                 }} type="password" placeholder="Password" />
+                
 
                 <div className="login-button-div">
                     <button id="signup-button" className="input-button" onClick={() => {
-                        Aunthentication()
+                        if(password.length >= 6){
+                            Aunthentication()}
+                    else{alert("Minimum 6 characters required in password...")}
                     }}>
                         Signup
                     </button>
